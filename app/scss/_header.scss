@@ -1,0 +1,47 @@
+.header {
+  padding: 40px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item+.menu__list-item {
+    padding-left: 35px;
+  }
+
+  &__list-link {
+    text-transform: uppercase;
+    color: $title;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s;
+    padding-bottom: 1px;
+
+    &:hover {
+      color: $accent;
+      border-bottom: 1px solid $accent;
+
+    }
+  }
+
+  &__list-link--active {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {}
+
+  &__link+.user-nav__link {
+    padding-left: 25px;
+  }
+}
