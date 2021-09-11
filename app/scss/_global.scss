@@ -15,6 +15,7 @@ body {
   justify-content: space-between;
   position: fixed;
   overflow-y: scroll;
+  @extend %quicksand-500;
 }
 
 .main {

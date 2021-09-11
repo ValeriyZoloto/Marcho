@@ -4,6 +4,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -22,26 +23,55 @@
     border-bottom: 1px solid transparent;
     transition: all 0.5s;
     padding-bottom: 1px;
+    @extend %quicksand-400;
 
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
-
+      @extend %quicksand-500;
     }
   }
 
   &__list-link--active {
     color: $accent;
     border-bottom: 1px solid $accent;
+    @extend %quicksand-500;
   }
 }
 
 .user-nav {
   display: flex;
 
-  &__link {}
+  &__link {
+    position: relative;
+  }
+
+  &__num {
+    position: absolute;
+    top: -9px;
+    right: -14px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent;
+    color: $white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+  }
 
   &__link+.user-nav__link {
     padding-left: 25px;
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+    fill: $title;
+    transition: fill 0.5s;
+
+    &:hover {
+      fill: $accent;
+    }
   }
 }

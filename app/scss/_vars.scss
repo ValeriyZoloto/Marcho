@@ -2,6 +2,7 @@
 $accent:#fe3e57;
 $default:#8d8d8d;
 $title:#29282d;
+$white: #ffffff;
 /*::::::::::::::::::::::::::цвета-finish::::::::::::::::::::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::переменные::::::::::::::::::::::::::::::::::::::::::*/
 $row: 1;
@@ -57,3 +58,25 @@ $xxs: 350px;
 }
 
 /*::::::::::::::::::::::::::миксин для брейкпоинтов-finish::::::::::::::::::::::*/
+/*::::::::::::::::::::::::::наследование для шрифтов::::::::::::::::::::::::::::*/
+%quicksand-400 {
+  font-family: 'Quicksand-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%quicksand-500 {
+  font-family: 'Quicksand--Medium', sans-serif;
+  font-weight: 500;
+}
+
+%roboto-700 {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%roboto-400 {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-weight: 400;
+}
+
+/*::::::::::::::::::::::::::наследование для шрифтов-finish:::::::::::::::::::::*/
