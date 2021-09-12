@@ -22,9 +22,9 @@
     color: $title;
     border-bottom: 1px solid transparent;
     transition: all 0.5s;
-    padding: 14px 0 5px 0;
+    padding: 14px 2px 5px 2px;
     border: 1px solid transparent;
-    @extend %quicksand-400;
+    @extend %roboto-400;
 
     &:focus {
       outline: 1px solid $accent;
@@ -33,19 +33,19 @@
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
-      @extend %quicksand-500;
+      @extend %roboto-700;
     }
 
     &:active {
       box-shadow: 7px 7px 70px 7px rgba(255, 17, 48, 0.3);
     }
   }
+}
 
-  &__list-link--active {
-    color: $accent;
-    border-bottom: 1px solid $accent;
-    @extend %quicksand-500;
-  }
+.menu__list-link--active {
+  color: $accent;
+  border-bottom: 1px solid $accent;
+  @extend %roboto-700;
 }
 
 .user-nav {
