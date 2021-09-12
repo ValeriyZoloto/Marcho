@@ -4,7 +4,8 @@
 
 .footer-top {
   display: flex;
-  padding: 70px 0 40px;
+  align-items: flex-start;
+  padding: 74px 0 18px;
   border-bottom: 1px solid #ececec;
 
   &__contact {
@@ -21,13 +22,97 @@
     max-width: 470px;
   }
 
+  &__logo {
+    display: block;
+    margin-bottom: 33px;
+    max-width: 153px;
+  }
+
+  &__address,
+  &__email,
+  &__tel {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  &__title {
+    margin-bottom: 33px;
+    color: $title;
+    @extend %roboto-500;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    margin-bottom: 31px;
+  }
+
+  &__form-input {
+    padding: 12px 10px 12px 15px;
+    max-width: 320px;
+    width: 100%;
+    background-color: $white;
+    border: none;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+
+    &::placeholder {
+      color: $default;
+      font-size: 16px;
+    }
+  }
+
+  &__form-btn {
+    padding: 12px 26px;
+    border: none;
+    background-color: $accent;
+    color: $white;
+    @extend %roboto-400;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+    margin-top: 33px;
+  }
+
+  &__social-item:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  &__social-link {
+    padding: 14px 0;
+  }
+
   &__social-img {
     height: 16px;
+    max-width: 16px;
     fill: $default;
     transition: fill 0.5s;
 
     &:hover {
       fill: $accent;
     }
+  }
+}
+
+.footer-bottom {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+
+  &__accept-img {
+    display: inline-block;
+    margin-left: 25px;
+    vertical-align: middle;
   }
 }

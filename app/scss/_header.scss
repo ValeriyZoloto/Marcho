@@ -14,7 +14,7 @@
   }
 
   &__list-item+.menu__list-item {
-    padding-left: 35px;
+    padding-left: 36px;
   }
 
   &__list-link {
@@ -22,13 +22,22 @@
     color: $title;
     border-bottom: 1px solid transparent;
     transition: all 0.5s;
-    padding-bottom: 1px;
+    padding: 14px 0 5px 0;
+    border: 1px solid transparent;
     @extend %quicksand-400;
+
+    &:focus {
+      outline: 1px solid $accent;
+    }
 
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
       @extend %quicksand-500;
+    }
+
+    &:active {
+      box-shadow: 7px 7px 70px 7px rgba(255, 17, 48, 0.3);
     }
   }
 
