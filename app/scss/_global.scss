@@ -47,3 +47,18 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.title {
+  text-align: center;
+  @extend %roboto-700;
+  font-size: 48px;
+  line-height: 1.35;
+  color: $title;
+  text-transform: uppercase;
+}
+
+.text {
+  text-align: center;
+  max-width: 570px;
+  margin: 0 auto;
+}
