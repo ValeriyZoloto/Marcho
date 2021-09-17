@@ -98,6 +98,13 @@ $xxs: 350px;
   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
 }
 
+%btn-hover {
+  background-color: #fff;
+  color: #29282d;
+  border: 1px solid #fe3e57;
+  box-shadow: 20px 7px 20px 0px rgba(255, 17, 48, 0.3);
+}
+
 /*::::::::::::::::::::::::::наследование для кнопки-finish::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::fancybox-snipet:::::::::::::::::::::::::::::::::::::*/
 

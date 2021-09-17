@@ -36,6 +36,10 @@
   &__link {
     @extend %btn;
     padding: 14px 35px;
+
+    &:hover {
+      @extend %btn-hover;
+    }
   }
 
   .slick-dots {

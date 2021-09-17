@@ -69,6 +69,10 @@
   &__form-btn {
     @extend %btn;
     border: none;
+
+    &:hover {
+      @extend %btn-hover;
+    }
   }
 
   &__social-list {
