@@ -57,6 +57,57 @@ a {
   text-transform: uppercase;
 }
 
+.breadcrumbs {
+  display: inline-flex;
+  justify-content: center;
+  padding-left: 25px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/breadcrumbs/home_icon.svg);
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 4px;
+
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    color: #727272;
+    padding-right: 40px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 9px;
+      height: 10px;
+      top: 9px;
+      right: 15px;
+      background-image: url(../images/breadcrumbs/angle-right.svg);
+    }
+
+    &:last-child {
+      color: $accent;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+}
+
 .text {
   text-align: center;
   max-width: 570px;
