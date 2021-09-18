@@ -19,6 +19,16 @@
 }
 
 @font-face {
+  font-family: 'Quicksand-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Quicksand-Bold'),
+    url(../fonts/Quicksand-Bold.woff2) format('woff2'),
+    url(../fonts/Quicksand-Bold.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Roboto-Bold';
   font-weight: 700;
   font-style: normal;
