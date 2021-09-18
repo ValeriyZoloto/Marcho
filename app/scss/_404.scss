@@ -1,0 +1,35 @@
+.page-404 {
+  padding: 110px 0 120px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 570px;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @extend %roboto-700;
+    font-size: 48px;
+    line-height: 1.35;
+    color: $title;
+  }
+
+  &__text {
+    margin-bottom: 55px;
+    max-width: 470px;
+  }
+
+  &__link {
+    @extend %btn;
+
+    &:hover {
+      @extend %btn-hover;
+    }
+  }
+}
