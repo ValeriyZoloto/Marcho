@@ -3,11 +3,33 @@
     <div class="shop__inner">
       <div class="shop__filters filter">
 
-        <div class="filter-search">
-          <h3 class="filter-search__title">Search</h3>
+        <div class="filter-search filter__item">
+          <h3 class="filter__title">Search</h3>
           <form class="filter-search__form" action="#">
-            <input class="filter-search__input" type="text" name="filter__search-input">
-            <button class="filter-search__btn" type='submit'></button>
+            <input class="filter-search__input" type="text" name="filter__search-input"
+              required placeholder="Search your keyword....">
+            <button class="filter-search__btn" type='submit'>
+              <svg class="filter-search__svg">
+                <use xlink:href="images/shop/search-sprite.svg#search"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="filter__item filter-price">
+          <h3 class="filter__title">Price Filter</h3>
+          <form class="filter-price__form" action="#">
+            <input class="filter-price__input" type="text" data-min="0" data-max="999"
+              data-from="200" data-to="800">
+            <label class="filter-price__label">
+              <span>
+                Price:
+                <span class="filter-price__from"></span>-
+                <span class="filter-price__to"></span>
+              </span>
+              <button class="filter-price__btn" type="submit">Filter</button>
+            </label>
+
           </form>
         </div>
 
