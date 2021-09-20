@@ -105,6 +105,14 @@ $xxs: 350px;
   box-shadow: 20px 7px 20px 0px rgba(255, 17, 48, 0.3);
 }
 
+%checkbox-hiden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 /*::::::::::::::::::::::::::наследование для кнопки-finish::::::::::::::::::::::*/
 /*::::::::::::::::::::::::::fancybox-snipet:::::::::::::::::::::::::::::::::::::*/
 
