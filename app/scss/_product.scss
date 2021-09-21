@@ -1,0 +1,13 @@
+.product-info {
+
+  &__social-img {
+    height: 16px;
+    max-width: 16px;
+    fill: $default;
+    transition: fill 0.5s;
+
+    &:hover {
+      fill: $accent;
+    }
+  }
+}
