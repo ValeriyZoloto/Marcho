@@ -1,6 +1,22 @@
 $(function () {
 	/*:::::::::::::::::::::::переменные:::::::::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::переменные-finish::::::::::::::::::::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::переключение-карточек::::::::::::::::::::::::::::::::::::*/
+	$(".shop-content__filter-btn").on("click", function () {
+		$(".shop-content__filter-btn").removeClass(
+			"shop-content__filter-btn--active"
+		);
+		$(this).addClass("shop-content__filter-btn--active");
+	});
+
+	$(".button-list").on("click", function () {
+		$(".product-item").addClass("product-item--list");
+	});
+
+	$(".button-grid").on("click", function () {
+		$(".product-item").removeClass("product-item--list");
+	});
+	/*:::::::::::::::::::::::переключение-карточек-finish:::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::select:::::::::::::::::::::::::::::::::::::::::::::::::::*/
 	$(".select-style").styler();
 	/*:::::::::::::::::::::::select-finish::::::::::::::::::::::::::::::::::::::::::::*/

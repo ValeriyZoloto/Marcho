@@ -282,6 +282,17 @@
 .shop-content {
   width: 100%;
 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ececec;
+
+    .product-item {
+      margin-bottom: 40px;
+    }
+  }
+
   &__filter {
     border: 1px solid #ececec;
     padding: 20px 25px 20px 30px;
@@ -297,6 +308,7 @@
   }
 
   &__filter-btn {
+    outline: transparent;
     padding: 0;
     border: none;
     background-color: transparent;
@@ -331,10 +343,14 @@
 
 .jq-selectbox__trigger-arrow {
   position: absolute;
-  top: 14px;
+  top: 12px;
   right: 12px;
   width: 10px;
   height: 5px;
   border: none;
   background-image: url(../images/filter/angle-down.svg);
+}
+
+.jq-selectbox__dropdown {
+  margin-left: 30px;
 }
