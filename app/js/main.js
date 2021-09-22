@@ -1,6 +1,24 @@
 $(function () {
 	/*:::::::::::::::::::::::переменные:::::::::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::переменные-finish::::::::::::::::::::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::product-slide__thumb-slider::::::::::::::::::::::::::::::*/
+	$(".product-slide__thumb").slick({
+		asNavFor: ".product-slide__big",
+		focusOnSelect: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		vertical: true,
+		draggable: false,
+	});
+	/*:::::::::::::::::::::::product-slide__thumb-slider-finish:::::::::::::::::::::::*/
+	/*:::::::::::::::::::::::product-slide__big-slider::::::::::::::::::::::::::::::::*/
+	$(".product-slide__big").slick({
+		asNavFor: ".product-slide__thumb",
+		draggable: false,
+		arrows: false,
+		fade: true,
+	});
+	/*:::::::::::::::::::::::product-slide__big-slider-finish:::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::переключение-карточек::::::::::::::::::::::::::::::::::::*/
 	$(".shop-content__filter-btn").on("click", function () {
 		$(".shop-content__filter-btn").removeClass(
@@ -18,7 +36,7 @@ $(function () {
 	});
 	/*:::::::::::::::::::::::переключение-карточек-finish:::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::select:::::::::::::::::::::::::::::::::::::::::::::::::::*/
-	$(".select-style").styler();
+	$(".select-style, .product-one__item-num").styler();
 	/*:::::::::::::::::::::::select-finish::::::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::filter-price:::::::::::::::::::::::::::::::::::::::::::::*/
 	$(".filter-price__input").ionRangeSlider({
