@@ -243,6 +243,19 @@
       line-height: 1;
     }
   }
+
+  &--fix {
+    .product-item__img-box::after {
+      content: '50% OFF';
+      @extend %btn;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      line-height: 1;
+    }
+  }
+
+
 }
 
 .star {
