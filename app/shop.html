@@ -117,8 +117,8 @@
 <section class="shop">
   <div class="container">
     <div class="shop__inner">
-      <ul class="shop__filters filter">
-        <li class="filter-search filter__item">
+      <div class="shop__filters filter">
+        <div class="filter-search filter__item">
           <h3 class="filter__title">Search</h3>
           <form class="filter-search__form" action="#">
             <input class="filter-search__input" type="text" name="filter__search-input"
@@ -129,9 +129,9 @@
               </svg>
             </button>
           </form>
-        </li>
+        </div>
 
-        <li class="filter__item filter-price">
+        <div class="filter__item filter-price">
           <h3 class="filter__title">Price Filter</h3>
           <form class="filter-price__form" action="#">
             <input class="filter-price__input" type="text" data-min="0" data-max="999"
@@ -145,9 +145,9 @@
               <button class="filter-price__btn" type="submit">Filter</button>
             </label>
           </form>
-        </li>
+        </div>
 
-        <li class="filter__item filter-color">
+        <div class="filter__item filter-color">
           <h3 class="filter__title">Color Filter</h3>
           <form class="filter-color__form" action="#">
             <label class="filter-color__label">
@@ -199,9 +199,9 @@
               </div>
             </label>
           </form>
-        </li>
+        </div>
 
-        <li class="filter__item filter-size">
+        <div class="filter__item filter-size">
           <h3 class="filter__title">Size Filter</h3>
           <form class="filter-size__form" action="#">
             <label class="filter-size__label">
@@ -234,9 +234,9 @@
               <span class="filter-size__text"> XXL</span>
             </label>
           </form>
-        </li>
+        </div>
 
-        <li class="filter__item filter-category">
+        <div class="filter__item filter-category">
           <h3 class="filter__title">category</h3>
           <form class="filter-category__form" action="#">
             <label class="filter-category__label">
@@ -287,9 +287,9 @@
               </div>
             </label>
           </form>
-        </li>
+        </div>
 
-        <li class="filter__item filter-popular">
+        <div class="filter__item filter-popular">
           <h3 class="filter__title">Popular Tags</h3>
           <form class="filter-popular__form" action="#">
             <label class="filter-popular__label">
@@ -322,9 +322,9 @@
               <span class="filter-popular__checkbox">Jewellery</span>
             </label>
           </form>
-        </li>
+        </div>
 
-      </ul>
+      </div>
       <div class="shop-content">
         <div class="shop-content__filter">
           <div class="shop-content__filter-buttons">
@@ -804,34 +804,34 @@
         </div>
 
         <div class="pagination">
-        	<a class="pagination__prev pagination__arrows" href="#">
-        		previous
-        	</a>
-        	<ul class="pagination__list">
-        		<li class="pagination__item">
-        			<a class="pagination__link" href="#">1</a>
-        		</li>
+          <a class="pagination__prev pagination__arrows" href="#">
+            previous
+          </a>
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">1</a>
+            </li>
 
-        		<li class="pagination__item">
-        			<a class="pagination__link" href="#">2</a>
-        		</li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">2</a>
+            </li>
 
-        		<li class="pagination__item">
-        			<a class="pagination__link pagination__link--active" href="#">3</a>
-        		</li>
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--active" href="#">3</a>
+            </li>
 
-        		<li class="pagination__item">
-        			<span class="pagination__link">....</span>
-        		</li>
+            <li class="pagination__item">
+              <span class="pagination__link">....</span>
+            </li>
 
-        		<li class="pagination__item">
-        			<a class="pagination__link" href="#">10</a>
-        		</li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">10</a>
+            </li>
 
-        	</ul>
-        	<a class="pagination__next pagination__arrows" href="#">
-        		next
-        	</a>
+          </ul>
+          <a class="pagination__next pagination__arrows" href="#">
+            next
+          </a>
         </div>
 
       </div>

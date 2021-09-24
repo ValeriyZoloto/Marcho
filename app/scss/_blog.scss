@@ -64,45 +64,6 @@
     padding: 30px 40px;
   }
 
-  &__item-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-
-  &__item-author,
-  &__item-data {
-    padding-left: 30px;
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 4px;
-      left: 0;
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  &__item-author {
-    &::before {
-      background-image: url(../images/blog/icons/user.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-    }
-  }
-
-  &__item-data {
-    &::before {
-      background-image: url(../images/blog/icons/time.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-    }
-  }
-
   &__item-title {
     @extend %roboto-400;
     font-size: 22px;
@@ -122,4 +83,44 @@
     height: 8px;
     transition: fill 0.5s;
   }
+}
+
+.blog-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &__author,
+  &__data {
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 4px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__author {
+    &::before {
+      background-image: url(../images/blog/icons/user.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &__data {
+    &::before {
+      background-image: url(../images/blog/icons/time.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
 }
