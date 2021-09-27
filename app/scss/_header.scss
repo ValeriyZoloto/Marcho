@@ -5,6 +5,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+
+    @include media-w($lg) {
+      padding-right: 10px;
+    }
+
+    @include media-w($smm) {
+      padding-right: 0;
+    }
+
   }
 
   &--404-page {
@@ -13,12 +23,75 @@
 }
 
 .menu {
+
+  @include media-w($sm) {
+    order: 1;
+    margin-left: 40px;
+  }
+
+  @include media-w($smm) {
+    order: 0;
+  }
+
   &__list {
     display: flex;
+
+    @include media-w($sm) {
+      // display: none;
+      position: absolute;
+      top: 120px;
+      width: 100%;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    display: none;
+
+    @include media-w($sm) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 30px;
+      height: 22px;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+
+      & span {
+        width: 100%;
+        height: 3px;
+        background-color: $title;
+      }
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $title;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
   }
 
   &__list-item+.menu__list-item {
     padding-left: 36px;
+
+    @include media-w($sm) {
+      padding-left: 0;
+    }
   }
 
   &__list-link {
@@ -54,6 +127,17 @@
 
 .user-nav {
   display: flex;
+
+  @include media-w($sm) {
+    margin-left: auto;
+  }
+
+  @include media-w($smm) {
+    width: 100%;
+    margin-top: 35px;
+    justify-content: flex-end;
+    padding-right: 15px;
+  }
 
   &__link {
     position: relative;
