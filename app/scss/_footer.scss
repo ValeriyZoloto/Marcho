@@ -52,8 +52,13 @@
     margin-bottom: 31px;
   }
 
+  &__form {
+    display: flex;
+  }
+
   &__form-input {
     padding: 12px 10px 12px 15px;
+    margin-right: 3px;
     max-width: 320px;
     width: 100%;
     background-color: $white;
