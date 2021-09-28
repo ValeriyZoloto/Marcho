@@ -1,4 +1,14 @@
 $(function () {
+	/*:::::::::::::::::::::::menu:::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+	$(".menu__btn").on("click", function () {
+		$(".menu__btn").toggleClass("menu__btn--active");
+		$(".menu__list").toggleClass("menu__list--active");
+	});
+
+	$(".footer-top__title--active").on("click", function () {
+		$(this).next().slideToggle();
+	});
+	/*:::::::::::::::::::::::menu-finish::::::::::::::::::::::::::::::::::::::::::::::*/
 	/*:::::::::::::::::::::::blog-page__slider::::::::::::::::::::::::::::::::::::::::*/
 	$(".blog-page__slider").slick({
 		prevArrow:
