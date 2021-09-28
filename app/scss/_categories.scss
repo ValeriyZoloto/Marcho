@@ -13,6 +13,20 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 30px;
+
+    @include media-w($mdb) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+
+    @include media-w($sms) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+    }
+
+    @include media-w($smx) {
+      min-height: 385px;
+    }
   }
 
   &__item {
@@ -23,12 +37,38 @@
     padding-left: 40px;
     position: relative;
 
+    @include media-w($mdb) {
+      background-position: center top;
+    }
+
+    @include media-w($smx) {
+      background-image: none !important;
+      justify-content: center;
+      padding-left: 15px;
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include media-w($sms) {
+      padding: 15px 10px;
+    }
+
     &:nth-child(1) {
       grid-row: span 2;
+
+      @include media-w($mdb) {
+        grid-row: auto;
+      }
+
+      @include media-w($smx) {
+        background-color: #f4dff0;
+      }
 
       .categories__item-subtitle,
       .categories__link:hover {
         color: #5800e4;
+
       }
 
       .categories__link:hover {
@@ -41,6 +81,17 @@
       padding-top: 102px;
       padding-bottom: 64px;
 
+      @include media-w($mdb) {
+        background-position: center right;
+        grid-column: auto;
+      }
+
+      @include media-w($smx) {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: #d7efef;
+      }
+
       .categories__item-subtitle,
       .categories__link:hover {
         color: $accent;
@@ -52,6 +103,9 @@
     }
 
     &:nth-child(3) {
+      @include media-w($smx) {
+        background-color: #fff6a7;
+      }
 
       .categories__item-subtitle,
       .categories__link:hover {
@@ -64,6 +118,9 @@
     }
 
     &:nth-child(4) {
+      @include media-w($smx) {
+        background-color: #ededed;
+      }
 
       .categories__item-subtitle,
       .categories__link:hover {
@@ -104,6 +161,9 @@
   background-repeat: no-repeat;
   background-position: center left;
 
+  @include media-w($sms) {
+    padding: 120px 0 60px;
+  }
 
   &__inner {
     background-image: url(../images/decor/categories-right-bg.png);
@@ -118,6 +178,10 @@
   justify-content: space-between;
   margin-bottom: 110px;
   position: relative;
+
+  @include media-w($mdb) {
+    display: block;
+  }
 
   &::before,
   &::after {
@@ -148,6 +212,16 @@
     width: 370px;
     background-color: $white;
     box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+
+    @include media-w($lg) {
+      padding: 20px 20px;
+      width: 340px;
+    }
+
+    @include media-w($mdb) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__item-title {
@@ -156,5 +230,13 @@
     font-size: 22px;
     line-height: 1.1;
     color: $title;
+
+    @include media-w($mdb) {
+      margin: 20px 0 10px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 20px;
+    }
   }
 }

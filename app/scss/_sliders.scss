@@ -5,6 +5,33 @@
   background-image: url(../images/decor/top-slider-bg.png);
   @extend %bg-center-contain;
 
+  @include media-w($sms) {
+    padding: 45px 0 30px;
+  }
+
+  &__img {
+    @include media-w($lg) {
+      width: 40%;
+      object-fit: contain;
+    }
+  }
+
+  .top-slider {
+    &__item {
+      .top-slider__img {
+        @include media-w($md) {
+          display: none;
+        }
+      }
+
+      .slick-dots {
+        @include media-w($md) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
   &__container {
     max-width: 1560px;
   }
@@ -17,6 +44,16 @@
   &__content {
     padding-left: 175px;
     padding-top: 125px;
+
+    @include media-w($lg) {
+      padding-left: 15px;
+      padding-top: 40px;
+    }
+
+    @include media-w($md) {
+      padding-top: 0;
+      padding-bottom: 50px;
+    }
   }
 
   &__title {
@@ -26,11 +63,25 @@
     color: $title;
     font-size: 58px;
     line-height: 1.17;
+
+    @include media-w($sms) {
+      font-size: 44px;
+      margin-bottom: 25px;
+    }
+
+    @include media-w($xxs) {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
     margin-bottom: 55px;
     max-width: 470px;
+
+    @include media-w($xxs) {
+      margin-bottom: 30px;
+    }
   }
 
   &__link {
@@ -46,6 +97,10 @@
     display: flex;
     justify-content: center;
     margin-top: -70px;
+
+    @include media-w($md) {
+      margin-top: 0;
+    }
 
     li {
       padding: 0 5px;
