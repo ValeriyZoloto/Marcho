@@ -4,8 +4,16 @@
   background-image: url(../images/decor/pattern.svg);
   @extend %bg-center-cover;
 
+  @include media-w($sms) {
+    padding: 60px 0;
+  }
+
   &__inner {
     display: flex;
+
+    @include media-w($md) {
+      display: block;
+    }
   }
 
   &__popup {
@@ -17,10 +25,23 @@
     justify-content: center;
     align-items: center;
     @extend %bg-center-cover;
+
+    @include media-w($md) {
+      background-position: center top;
+      max-width: 100%;
+    }
+
+    @include media-w($sms) {
+      height: 270px;
+    }
   }
 
   &__content {
     max-width: 570px;
+
+    @include media-w($md) {
+      max-width: 100%;
+    }
   }
 
   &__subtitle {
@@ -31,6 +52,11 @@
     text-transform: uppercase;
     line-height: 1.182;
     margin-bottom: 5px;
+
+    @include media-w($sms) {
+      padding-top: 40px;
+      font-size: 18px;
+    }
   }
 
   &__title {
