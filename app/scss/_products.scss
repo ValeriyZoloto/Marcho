@@ -3,10 +3,23 @@
   background-color: $white;
   text-align: center;
 
+  @include media-w($sms) {
+    padding: 60px 0;
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 45px 30px;
+
+    @include media-w($sm) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+
+    @include media-w($sms) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__text {
@@ -37,6 +50,10 @@
 .product-item {
   max-width: 370px;
   text-align: center;
+
+  @include media-w($sms) {
+    max-width: 100%;
+  }
 
   &.product-item--list {
     min-width: 100%;
@@ -143,6 +160,10 @@
     height: 370px;
     overflow: hidden;
     margin-bottom: 25px;
+
+    @include media-w($md) {
+      height: 305px;
+    }
   }
 
   &__svg {
@@ -199,6 +220,10 @@
 
   &__images {
     object-fit: cover;
+
+    @include media-w($sms) {
+      width: 100%;
+    }
   }
 
   &:hover {
