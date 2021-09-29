@@ -1,11 +1,18 @@
 .map {
   padding: 120px 0;
 
+  @include media-w($xs) {
+    padding: 60px 0;
+  }
 }
 
 #map {
   height: 450px;
   width: 100%;
+
+  @include media-w($xs) {
+    height: 250px;
+  }
 }
 
 .contact {
@@ -13,11 +20,21 @@
 
   &__inner {
     display: flex;
+
+    @include media-w($mdb) {
+      display: block;
+    }
   }
 
   &__info {
     max-width: 370px;
     margin-right: 30px;
+
+    @include media-w($mdb) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__info-title {
@@ -26,6 +43,10 @@
     line-height: 1.2;
     color: $title;
     margin-bottom: 20px;
+
+    @include media-w($xs) {
+      font-size: 28px;
+    }
   }
 
   &__info-text {
@@ -38,6 +59,10 @@
     padding-left: 80px;
     position: relative;
 
+    @include media-w($xxs) {
+      padding-left: 55px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -46,6 +71,12 @@
       width: 60px;
       height: 60px;
       box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+
+      @include media-w($xxs) {
+        top: 1px;
+        width: 50px;
+        height: 50px;
+      }
     }
 
     &::after {
@@ -57,6 +88,11 @@
       height: 20px;
       background-image: url(../images/contact/phone-icon.svg);
       background-repeat: no-repeat;
+
+      @include media-w($xxs) {
+        left: 15px;
+        top: 15px;
+      }
     }
   }
 
@@ -69,6 +105,11 @@
       width: 14px;
       height: 20px;
       background-image: url(../images/contact/location-icon.svg);
+
+      @include media-w($xxs) {
+        left: 17px;
+        top: 15px;
+      }
     }
   }
 
@@ -81,6 +122,11 @@
       width: 18px;
       height: 20px;
       background-image: url(../images/contact/mail-icon.svg);
+
+      @include media-w($xxs) {
+        left: 16px;
+        top: 15px;
+      }
     }
   }
 
@@ -98,6 +144,11 @@
     width: 100%;
     padding: 60px 40px;
     box-shadow: 0px 10px 40px 0px rgba(172, 172, 172, 0.3);
+
+    @include media-w($mdb) {
+      box-shadow: none;
+      padding: 0;
+    }
   }
 
   &__form-title {
@@ -111,8 +162,16 @@
     display: flex;
     justify-content: space-between;
 
+    @include media-w($mdb) {
+      display: block;
+    }
+
     input {
       width: 330px;
+
+      @include media-w($mdb) {
+        width: 100%;
+      }
     }
   }
 
