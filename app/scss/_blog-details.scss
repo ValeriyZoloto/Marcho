@@ -20,9 +20,18 @@
       background-color: #f6f6f6;
       color: $title;
       border-left: 3px solid $accent;
+
+      @include media-w($xs) {
+        padding: 10px;
+      }
     }
   }
 
+  &__info-item {
+    @include media-w($sms) {
+      margin-bottom: 10px;
+    }
+  }
 
   &__left-img {
     float: left;
@@ -35,11 +44,19 @@
     padding: 30px;
     border: 1px solid #ececec;
     border-top: none;
+
+    @include media-w($sms) {
+      padding: 20px 10px;
+    }
   }
 
   &__info {
     display: flex;
     margin-bottom: 25px;
+
+    @include media-w($sms) {
+      display: block;
+    }
   }
 
   &__info-link {
@@ -87,6 +104,10 @@
 
   .comments-form {
     border-bottom: none;
+
+    @include media-w($sms) {
+      padding-bottom: 0;
+    }
   }
 
   &__social-img {
@@ -104,9 +125,21 @@
     margin: 25px 0 35px;
     display: flex;
     justify-content: space-between;
+
+    @include media-w($sms) {
+      flex-wrap: wrap;
+    }
+
+    @include media-w($xs) {
+      display: block;
+    }
   }
 
   &__tags {
+    @include media-w($sms) {
+      padding-right: 10px;
+    }
+
     span {
       @extend %roboto-700;
       text-transform: uppercase;
@@ -145,6 +178,10 @@
     height: 140px;
     margin-right: 30px;
     object-fit: cover;
+
+    @include media-w($xs) {
+      display: none;
+    }
   }
 
   &__author-name {
@@ -158,6 +195,10 @@
 
   .comments-form__text-input {
     width: 370px;
+
+    @include media-w($sms) {
+      width: 100%;
+    }
   }
 }
 

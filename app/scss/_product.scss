@@ -351,6 +351,10 @@
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover;
+
+    @include media-w($xs) {
+      display: none;
+    }
   }
 
   &__content-top {
@@ -472,6 +476,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @include media-w($sms) {
+      display: block;
+      margin-bottom: 0;
+    }
   }
 
   &__text-input {
@@ -480,6 +489,10 @@
     height: 50px;
     padding: 0 20px;
     border: 1px solid #f0f0f0;
+
+    @include media-w($sms) {
+      margin-bottom: 30px;
+    }
   }
 
   &__textarea {
