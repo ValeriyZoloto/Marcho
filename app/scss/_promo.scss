@@ -6,6 +6,10 @@
   background-position: center center;
   text-align: center;
 
+  @include media-w($sms) {
+    padding: 60px 0;
+  }
+
   &__inner {
     max-width: 570px;
     width: 100%;
@@ -24,6 +28,15 @@
     display: flex;
     justify-content: space-between;
     margin-top: 55px;
+
+    @include media-w($sms) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include media-w($xs) {
+      margin-top: 30px;
+    }
   }
 
   &__clock-item {
@@ -36,6 +49,14 @@
     border-radius: 50%;
     text-align: center;
     box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
+
+    @include media-w($sms) {
+      margin: 20px 35px;
+    }
+
+    @include media-w($xs) {
+      margin: 8px;
+    }
 
     span {
       font-size: 48px;
@@ -59,6 +80,10 @@
     padding: 14px 27px;
     transition: color 0.5s;
 
+    @include media-w($xs) {
+      margin-top: 30px;
+    }
+
     &:hover {
       background-color: $accent;
       color: $white;
@@ -74,5 +99,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($sms) {
+      flex-wrap: wrap;
+      justify-content: center;
+      height: auto;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__item {
+    @include media-w($sms) {
+      margin: 10px 35px;
+    }
+
+    @include media-w($smm) {
+      margin: 10px 21px;
+    }
+
+    @include media-w($xs) {
+      margin: 10px 25px;
+    }
   }
 }

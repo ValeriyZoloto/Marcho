@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-position: center center;
 
+  @include media-w($smx) {
+    padding: 60px 0;
+  }
+
   &__title {
     margin-bottom: 10px;
   }
@@ -17,6 +21,20 @@
     display: flex;
     justify-content: space-between;
 
+    @include media-w($lg) {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-w($md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-w($smx) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     &::after {
       position: absolute;
       content: '';
@@ -29,6 +47,10 @@
       background-size: cover;
       background-position: center;
       z-index: -1;
+
+      @include media-w($xl) {
+        right: 8px;
+      }
     }
   }
 
@@ -36,6 +58,16 @@
     max-width: 370px;
     border: 1px solid #ececec;
     transition: color 0.5s, fill 0.5s, box-shadow 0.5s;
+
+    @include media-w($md) {
+      max-width: 100%;
+    }
+
+    & img {
+      @include media-w($md) {
+        width: 100%;
+      }
+    }
 
     &:hover {
       box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
@@ -57,11 +89,19 @@
     img {
       height: 288px;
       object-fit: cover;
+
+      @include media-w($xxs) {
+        height: 220px;
+      }
     }
   }
 
   &__item-box {
     padding: 30px 40px;
+
+    @include media-w($lg) {
+      padding: 20px 15px;
+    }
   }
 
   &__item-title {
@@ -90,6 +130,10 @@
   justify-content: space-between;
   margin-bottom: 20px;
 
+  @include media-w($xxs) {
+    display: block;
+  }
+
   &__author,
   &__data {
     padding-left: 30px;
@@ -115,6 +159,10 @@
   }
 
   &__data {
+    @include media-w($xxs) {
+      margin-top: 10px;
+    }
+
     &::before {
       background-image: url(../images/blog/icons/time.svg);
       background-repeat: no-repeat;
