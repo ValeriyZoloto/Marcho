@@ -1,13 +1,48 @@
 .shop {
   padding: 120px 0 105px;
 
+  &__filter-btn {
+    display: none;
+
+    @include media-w($lg) {
+      position: fixed;
+      right: 0;
+      bottom: 50px;
+      z-index: 101;
+      display: flex;
+      border-radius: 4px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: $accent;
+      padding: 0;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
   &__inner {
     display: flex;
+
+    @include media-w($xl) {
+      display: block;
+    }
   }
 
   &__filters {
     width: 370px;
     margin-right: 30px;
+
+    @include media-w($xl) {
+      width: 100%;
+      margin-right: 0;
+      display: none;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      z-index: 100;
+      background-color: $white;
+    }
   }
 }
 
@@ -83,8 +118,6 @@
     align-items: center;
     padding-top: 30px;
   }
-
-  span {}
 
   &__btn {
     border: 1px solid transparent;
@@ -297,8 +330,34 @@
     flex-wrap: wrap;
     border-bottom: 1px solid #ececec;
 
+    @include media-w($xl) {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-w($sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-w($sms) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     .product-item {
       margin-bottom: 40px;
+
+      &__images {
+        @include media-w($smz) {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &__nogrid {
+    @include media-w($xl) {
+      display: flex;
     }
   }
 
@@ -309,11 +368,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-w($smz) {
+      padding: 20px 25px 20px 0;
+    }
   }
 
   &__filter-buttons {
     display: flex;
     align-items: center;
+
+    @include media-w($smz) {
+      display: none;
+    }
   }
 
   &__filter-btn {

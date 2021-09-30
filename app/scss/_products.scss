@@ -221,7 +221,7 @@
   &__images {
     object-fit: cover;
 
-    @include media-w($sms) {
+    @include media-w($sm) {
       width: 100%;
     }
   }
@@ -285,4 +285,8 @@
 
 .star {
   margin: 0 auto;
+
+  @include media-w($xs) {
+    margin: 0;
+  }
 }

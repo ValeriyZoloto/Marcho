@@ -10,6 +10,15 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 30px;
 
+    @include media-w($sm) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+
+    @include media-w($xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     .product-item__img-box {
       height: 270px;
     }

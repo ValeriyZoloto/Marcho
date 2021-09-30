@@ -70,6 +70,7 @@ a {
   justify-content: center;
   padding-left: 25px;
   position: relative;
+  flex-wrap: wrap;
 
   &::before {
     content: '';
@@ -145,6 +146,10 @@ a {
   &__arrows {
     position: relative;
     text-transform: uppercase;
+
+    @include media-w($xs) {
+      display: none;
+    }
 
     &::before {
       position: absolute;

@@ -1,19 +1,41 @@
 .product-page {
   padding: 120px 0;
+
+  @include media-w($xs) {
+    padding: 60px 0;
+  }
 }
 
 .product-one {
   &__inner {
     display: flex;
+
+    @include media-w($md) {
+      display: block;
+    }
   }
 
   &__slide {
     width: 730px;
     margin-right: 70px;
+
+    @include media-w($xl) {
+      width: auto;
+
+    }
+
+    @include media-w($md) {
+      margin-right: 0;
+    }
   }
 
   &__content {
     width: 370px;
+
+    @include media-w($md) {
+      width: 100%;
+      margin-top: 35px;
+    }
   }
 
   &__title {
@@ -28,6 +50,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+
+    @include media-w($xs) {
+      display: block;
+    }
   }
 
   &__item-star {
@@ -57,6 +83,11 @@
     display: flex;
     align-items: center;
     font-size: 18px;
+
+    @include media-w($xs) {
+      margin-bottom: 5px;
+      padding-left: 5px;
+    }
   }
 
   &__price-new {
@@ -73,6 +104,10 @@
     border: 1px solid transparent;
     @extend %btn;
     margin-left: 15px;
+
+    @include media-w($xxs) {
+      margin-left: 0;
+    }
 
     &:hover {
       @extend %btn-hover;
@@ -91,6 +126,10 @@
   &__thumb {
     width: 140px;
     margin-right: 30px;
+
+    @include media-w($xl) {
+      display: none;
+    }
   }
 
   &__thumb-item {
@@ -111,10 +150,23 @@
   &__big {
     width: 560px;
 
+    @include media-w($md) {
+      width: 100%;
+    }
+
     img {
       width: 560px;
       height: 650px;
       object-fit: cover;
+
+      @include media-w($md) {
+        width: auto;
+        margin: 0 auto;
+      }
+
+      @include media-w($xs) {
+        height: 400px;
+      }
     }
   }
 }
@@ -276,6 +328,10 @@
   &__size-label {
     display: inline-block;
     margin-right: 10px;
+
+    @include media-w($xxs) {
+      margin-right: -1px;
+    }
   }
 
   &__size-input {
@@ -309,6 +365,11 @@
     margin-bottom: 10px;
     @extend %roboto-400;
     font-size: 22px;
+
+    @include media-w($smm) {
+      display: block;
+      margin-bottom: 14px;
+    }
 
     &--active {
       position: relative;
@@ -372,7 +433,10 @@
   &__content-date {
     position: relative;
     padding-left: 13px;
-    // border-left: 1px solid $default;
+
+    @include media-w($xxs) {
+      display: none;
+    }
 
     &::before {
       content: '';
@@ -444,10 +508,21 @@
   &__rating-title {
     color: $title;
     margin-right: 60px;
+
+    @include media-w($smx) {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__label {
     margin-right: 25px;
+
+    @include media-w($smx) {
+      display: block;
+      margin-right: 0;
+    }
 
     &:last-child {
       margin-right: 0;
@@ -456,6 +531,8 @@
 
   &__input {
     @extend %radio-hidden;
+
+
 
     &:checked+.comments-form__radio {
       path {
@@ -491,6 +568,7 @@
     border: 1px solid #f0f0f0;
 
     @include media-w($sms) {
+      width: 100%;
       margin-bottom: 30px;
     }
   }
